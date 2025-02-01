@@ -2,8 +2,16 @@
   background-color: red;
   display: flex;
   justify-content: space-around;
+  font-size: clamp(1rem, 2vw, 4rem);
+  height: 10dvh;
+  align-items: center;
 }
 .my-navigation a {
   text-decoration: none;
   color: white;
+}
+
+.my-navigation .home-button {
+  color: black;
+  background-color: rgb(192, 217, 255);
 }

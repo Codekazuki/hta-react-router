@@ -3,7 +3,9 @@ import "../assets/styles/nav.css";
 const Navbar = () => {
   return (
     <div className='my-navigation'>
-      <NavLink to='/'>Home</NavLink>
+      <NavLink className='home-button' to='/'>
+        Home
+      </NavLink>
       <NavLink to='about'>About US</NavLink>
       <NavLink to='contactus'>Contact Us</NavLink>
       <NavLink to='service'>Services</NavLink>
