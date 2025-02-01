@@ -4,7 +4,7 @@ import Footer from "../component/Footer";
 
 const HomeLayOut = () => {
   return (
-    <div>
+    <div className='container'>
       <Navbar />
       <Outlet />
       <Footer />
