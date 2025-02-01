@@ -1,3 +1,9 @@
 .my-navigation {
   background-color: red;
+  display: flex;
+  justify-content: space-around;
+}
+.my-navigation a {
+  text-decoration: none;
+  color: white;
 }
