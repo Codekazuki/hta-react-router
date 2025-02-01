@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
-
+import "../assets/styles/nav.css";
 const Navbar = () => {
   return (
-    <div>
+    <div className='my-navigation'>
       <NavLink to='/'>Home</NavLink>
       <NavLink to='about'>About US</NavLink>
       <NavLink to='contactus'>Contact Us</NavLink>
