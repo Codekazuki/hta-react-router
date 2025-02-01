@@ -1,4 +1,4 @@
 .footer {
   margin-top: auto;
-  color: yellow;
+  color: var(--white);
 }
