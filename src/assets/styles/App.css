@@ -4,16 +4,16 @@
   box-sizing: border-box;
 }
 :root {
-  --gold-light: #ffd700; /* Light Gold */
-  --gold-regular: #ffcc00; /* Regular Gold */
-  --gold-dark: #b8860b; /* Dark Gold */
-  --gold-dim: #c1a100; /* Dim Gold */
-  --gold-metallic: #d4af37; /* Metallic Gold */
-  --gold-rose: #b76e00; /* Rose Gold */
-  --gold-bronze: #cd7f32; /* Bronze Gold */
-  --gold-mary: #59cd32; /* Bronze Gold */
-  --black: #000000; /* Black */
-  --white: #ffffff; /* White */
+  --gold-light: #ffd700;
+  --gold-regular: #ffcc00;
+  --gold-dark: #b8860b;
+  --gold-dim: #c1a100;
+  --gold-metallic: #d4af37;
+  --gold-rose: #b76e00;
+  --gold-bronze: #cd7f32;
+  --gold-mary: #59cd32;
+  --black: #000000;
+  --white: #ffffff;
 }
 .container {
   background-color: var(--gold-light);
