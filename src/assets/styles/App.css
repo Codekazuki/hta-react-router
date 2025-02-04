@@ -16,7 +16,7 @@
   --white: #ffffff;
 }
 .container {
-  background-color: var(--gold-light);
+  background-color: var(--gold-regular);
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
