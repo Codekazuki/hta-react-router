@@ -30,10 +30,6 @@ const router = createBrowserRouter([
         path: "contactus",
         element: <Contactus />,
       },
-      {
-        path: "githubusers",
-        element: <GithubUsers />,
-      },
     ],
   },
 ]);
