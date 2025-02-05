@@ -9,6 +9,7 @@ const Navbar = () => {
       <NavLink to='about'>About US</NavLink>
       <NavLink to='contactus'>Contact Us</NavLink>
       <NavLink to='service'>Services</NavLink>
+      <NavLink to='githubusers'>Github Users</NavLink>
     </div>
   );
 };
