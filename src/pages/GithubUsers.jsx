@@ -3,7 +3,6 @@ const myUrl = "https://api.github.com/users";
 console.log(myUrl);
 
 const GithubUsers = () => {
-  const [count, setCount] = useState(0);
   const [users, setUsers] = useState([]);
   useEffect(() => {
     const fetchUsers = async () => {
@@ -11,6 +10,7 @@ const GithubUsers = () => {
         const response = await fetch(myUrl);
         const users = await response.json();
         setUsers(users);
+        console.log(users);
       } catch (error) {
         console.log(error);
       }
@@ -18,13 +18,24 @@ const GithubUsers = () => {
     fetchUsers();
   }, []);
 
-  const handleIncrease = () => {
-    setCount(count + 1);
-  };
   return (
     <div>
-      <p>{count}</p>
-      <button onClick={handleIncrease}>increase</button>
+      {users.map((user) => {
+        const { id, login, avatar_url, html_url } = user;
+        return (
+          <ul key={id}>
+            <li>
+              <div>
+                <img src={avatar_url} alt={login} height='96px' />
+              </div>
+              <div>
+                <h1>{login}</h1>
+                <a href={html_url}>take me to {login} page</a>
+              </div>
+            </li>
+          </ul>
+        );
+      })}
     </div>
   );
 };
