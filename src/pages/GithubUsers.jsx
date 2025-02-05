@@ -27,7 +27,7 @@ const GithubUsers = () => {
       <button onClick={() => setCount(count + 1)}>incr</button>
       <section>
         {users.map((user) => {
-          const { id, login, html_url, avatar_url } = user;
+          const { id, login, html_url, avatar_url, repos_url } = user;
           return (
             <ul key={id}>
               <li>
@@ -38,6 +38,9 @@ const GithubUsers = () => {
                 <p>
                   <a href={html_url}>Link to profile</a>
                 </p>
+                <h4>
+                  <a href={repos_url}>Repos</a>
+                </h4>
                 <button onClick={() => HandleDeleteUser(id)}>
                   Delete User
                 </button>
