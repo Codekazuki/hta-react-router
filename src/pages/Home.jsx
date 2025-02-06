@@ -1,5 +1,8 @@
+import { useGlobalContext } from "../context";
+
 const Home = () => {
-  return <div>Home</div>;
+  const { name } = useGlobalContext();
+  return <div>{name}</div>;
 };
 
 export default Home;
