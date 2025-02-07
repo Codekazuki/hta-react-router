@@ -1,11 +1,7 @@
-import { useGlobalContext } from "../context";
-
 const About = () => {
-  const { name, changeName } = useGlobalContext();
   return (
     <div>
-      <p>{name}</p>
-      <button onClick={changeName}>hello</button>
+      <p>This is what I am all about</p>
     </div>
   );
 };
