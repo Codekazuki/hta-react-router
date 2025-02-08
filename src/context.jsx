@@ -16,6 +16,15 @@ const AppContext = ({ children }) => {
   const clearUser = () => {
     setUsers([]);
   };
+  const reloadUsers = async () => {
+    try {
+      const response = await fetch(myUrl);
+      const users = await response.json();
+      setUsers(users);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <GlobalContext.Provider
@@ -27,6 +36,7 @@ const AppContext = ({ children }) => {
         users,
         setUsers,
         myUrl,
+        reloadUsers,
       }}
     >
       {children}

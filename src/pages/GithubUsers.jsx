@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useGlobalContext } from "../context";
 
 const GithubUsers = () => {
-  const { users, clearUser, setUsers, myUrl } = useGlobalContext();
+  const { users, clearUser, setUsers, myUrl, reloadUsers } = useGlobalContext();
   useEffect(() => {
     const fetchUsers = async () => {
       try {
@@ -35,6 +35,7 @@ const GithubUsers = () => {
         );
       })}
       <button onClick={clearUser}>Clear User</button>
+      <button onClick={reloadUsers}>Reload Users</button>
     </div>
   );
 };
