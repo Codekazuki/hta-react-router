@@ -26,7 +26,8 @@ const AppContext = ({ children }) => {
     }
   };
   const deleteUser = (id) => {
-    setUsers((newUsers) => newUsers.id !== id);
+    const newUsers = users.filter((newUsers) => newUsers.id !== id);
+    setUsers(newUsers);
   };
 
   return (
