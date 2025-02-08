@@ -9,7 +9,7 @@ export const useGlobalContext = () => useContext(GlobalContext);
 const AppContext = ({ children }) => {
   const [count, setCount] = useState(0);
   const handleIncrease = () => {
-    setCount((c) => c + 1);
+    setCount(count + 1);
   };
 
   return (
