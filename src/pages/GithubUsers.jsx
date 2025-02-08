@@ -1,17 +1,14 @@
 import { useEffect } from "react";
 import { useGlobalContext } from "../context";
-const myUrl = "https://api.github.com/users";
-console.log(myUrl);
 
 const GithubUsers = () => {
-  const { users, clearUser, setUsers } = useGlobalContext();
+  const { users, clearUser, setUsers, myUrl } = useGlobalContext();
   useEffect(() => {
     const fetchUsers = async () => {
       try {
         const response = await fetch(myUrl);
         const users = await response.json();
         setUsers(users);
-        console.log(users);
       } catch (error) {
         console.log(error);
       }
@@ -33,11 +30,11 @@ const GithubUsers = () => {
                 <h1>{login}</h1>
                 <a href={html_url}>take me to {login} page</a>
               </div>
-              <button onClick={clearUser}>Remove Users</button>
             </li>
           </ul>
         );
       })}
+      <button onClick={clearUser}>Clear User</button>
     </div>
   );
 };
