@@ -25,6 +25,9 @@ const AppContext = ({ children }) => {
       console.log(error);
     }
   };
+  const deleteUser = (id) => {
+    setUsers((newUsers) => newUsers.id !== id);
+  };
 
   return (
     <GlobalContext.Provider
@@ -37,6 +40,7 @@ const AppContext = ({ children }) => {
         setUsers,
         myUrl,
         reloadUsers,
+        deleteUser,
       }}
     >
       {children}
